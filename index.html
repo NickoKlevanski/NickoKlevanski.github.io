@@ -2,41 +2,106 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login</title>
-	<link rel="stylesheet" href="css/main.css">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div class="header">
-			<h1>Log in to the Site</h1>
-			<img src="img/close.png" alt="close" class="close-form">
-		</div>
-		<div class="main-content">
-			<div class="block log">
-				<form>
-					<label>Login</label>
-					<input type="text" class="field">
-					<label>Password</label>
-					<input type="password" class="field">
-					<input type="checkbox" checked> 
-					<label>Remember me</label>
-					<br>
-					<a href="#">
-						<button class="btn">Log in</button>
-					</a>
-					<a href="#" class="help">Need help logging in?</a>
-				</form>
-			</div>
-			<div class="block social">
-				<a href="#" class="fb">Log in with Facebook</a>
-				<a href="#" class="gp">Log in with Google +</a>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="footer">
-			<p>Don't have an account? <a href="#">Sign up</a></p>
-		</div>
+<section class="header">
+	<div class="menu">
+		<nav>
+			<a href="#">home</a>
+			<a href="#">about me</a>
+			<a href="#">portfolio</a>
+			<a href="#">contact</a>
+		</nav>
 	</div>
+	<div class="logo">
+		<img src="img/logo.png" alt="">
+	</div>
+	<h1 class="inner">jwood<span>photography</span></h1>
+	<div class="scroll-down header-scroll">
+			<span>scroll down to see more</span><br>
+			<img src="img/double_arrow.svg" alt=""> 
+	</div>
+</section>
+<section class="about-me">
+		<div class="menu about-me-menu">
+			<nav>
+				<a href="#">home</a>
+				<a href="#">about me</a>
+				<a href="#">portfolio</a>
+				<a href="#">contact</a>
+			</nav>
+		</div>
+		<div class="about-me-container">
+			<div class="about-me-photo">
+				<img class="image" src="img/Jason Wood.jpg" alt="jason wood">
+			</div>
+			<div class="about-me-text">
+				<h2>ABOUT ME</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+				<p>
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				</p>
+				<div class="jason-name">Jason Wood</div>
+			</div>
+		</div>
+		<div class="scroll-down about-scroll-down">
+			<span>keep scrolling.There is still more to come</span><br>
+			<img src="img/double_arrow2.svg" alt=""> 
+		</div>
+	</section>
+	<section class="portfolio">
+		<div class="menu portfolio-head">
+			<nav>
+				<a href="#">home</a>
+				<a href="#">about me</a>
+				<a href="#">portfolio</a>
+				<a href="#">contact</a>
+			</nav>
+		</div>
+		<h2>PORTFOLIO</h2>
+		<div class="pf-photos">
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/01.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/02.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/03.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/04.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/05.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/06.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/07.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/08.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/09.jpg" alt=""></div>
+            <div class="pf-photos-position"><img class="pf-photos-size" src="img/10.jpg" alt=""></div>
+		</div>
+		<div class="scroll-down pf-scroll-down">
+			<span>DO YOU WANT TO SEE IT WITH YOUR OWN EYES? SCROLL!</span><br>
+			<img src="img/double_arrow.svg" alt=""> 
+		</div>
+	</section>
+	<section class="about-me">
+		<div class="menu about-me-menu">
+			<nav>
+				<a href="#">home</a>
+				<a href="#">about me</a>
+				<a href="#">portfolio</a>
+				<a href="#">contact</a>
+			</nav>
+		</div>
+		<dl class="contact__info inner">
+				<dt class="contact__name">mail:</dt>
+				<dd class="contact__description"><a href="mailto:Jason@wood.com">Jason@wood.com</a></dd>
+				<dt class="contact__name">phone:</dt>
+				<dd class="contact__description contact__description--phone"><a href="tel:+44 212 432 444">+44 212 432 444</a></dd>
+				<dt class="contact__name">social media:</dt>
+				<dd class="contact__description">
+					<a href="#" class="social-link social-link--fb"></a>
+					<a href="#" class="social-link social-link--tw"></a>
+					<a href="#" class="social-link social-link--im"></a>
+				</dd>
+			</dl>
+	</section>
 </body>
 </html>
