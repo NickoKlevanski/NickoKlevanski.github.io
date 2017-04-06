@@ -1,0 +1,125 @@
+@font-face {
+	font-family: 'cabinsemibold';
+	src: url('../fonts/cabin-semibold-webfont.eot');
+	src: url('../fonts/cabin-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/cabin-semibold-webfont.woff2') format('woff2'),
+	url('../fonts/cabin-semibold-webfont.woff') format('woff'),
+	url('../fonts/cabin-semibold-webfont.ttf') format('truetype'),
+	url('../fonts/cabin-semibold-webfont.svg#cabinsemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$blue-color: #65abd0;
+$blue-push-color: #5093b7;
+
+* {
+	box-sizing: border-box;
+}
+
+button {
+	border:none;
+	outline:none;
+}
+
+.container {
+	max-width: 960px;
+	margin: 50px auto;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+/*-------------------------------------*\
+
+#BUTTONS
+
+\*-------------------------------------*/
+
+.btn {
+	display: inline-block;
+	margin:0 20px 20px 0;
+	padding: 18px 15px;
+	min-width: 140px;
+	background-color: $blue-color;
+	color:#fff;
+	font-family: 'cabinsemibold', sans-serif;
+	vertical-align: middle;
+	font-size: 16px;
+	letter-spacing: 0.02rem;
+	text-align:center;
+	transition: 0.3s;
+	cursor: pointer;
+	&:hover {
+		background:$blue-push-color;
+		transition: 0.3s;
+	}
+	&--rounded {
+		border-radius: 6px;
+	}
+	&--round {
+		border-radius: 999rem;
+	}
+	&--ghost {
+		border: 2px solid $blue-color;
+		background-color:transparent;
+		border-radius: 999rem;
+		color: $blue-color;
+		&:hover {
+			border: 2px solid $blue-push-color;
+			background-color:transparent;
+			color: $blue-push-color;
+			transition: 0.3s;
+		}
+	}
+	&--square {
+		position: relative;
+		min-width:0px;
+		width: 48px;
+		height: 48px;
+		padding:0;
+		border-radius: 6px;
+		transition: 0.3s;
+		&:after {
+			content: '';
+			position: absolute;
+			top:50%;
+			left:50%;
+			width:18px;
+			height:2px;
+			background-color: currentColor;
+			transform: translate( -50%, -50%);
+			box-shadow: 0 6px 0 0 currentColor,
+			0 -6px 0 0 currentColor;
+		}
+	}
+	&--large {
+		padding: 23px 15px;
+		min-width:190px;
+		font-size: 18px;
+	}
+	&--small {
+		padding: 12px 15px;
+		min-width: 120px;
+		font-size: 14px;
+		&--square {
+			position: relative;
+			min-width:0px;
+			width: 36px;
+			height: 36px;
+			padding:0;
+			border-radius: 6px;
+			transition: 0.3s;
+			&:after {
+				content: '';
+				position: absolute;
+				top:50%;
+				left:50%;
+				width:16px;
+				height:2px;
+				background-color: currentColor;
+				transform: translate( -50%, -50%);
+				box-shadow: 0 6px 0 0 currentColor,
+				0 -6px 0 0 currentColor;
+		}
+	}
+}
