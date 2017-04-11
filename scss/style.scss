@@ -23,7 +23,7 @@ button {
 }
 
 .container {
-	max-width: 960px;
+	max-width: 980px;
 	margin: 50px auto;
 	padding: 20px 0;
 	overflow: hidden;
@@ -80,7 +80,7 @@ button {
 		border-radius: 6px;
 		transition: 0.3s;
 		&:after {
-			content: '';
+			content: ' ';
 			position: absolute;
 			top:50%;
 			left:50%;
@@ -90,6 +90,158 @@ button {
 			transform: translate( -50%, -50%);
 			box-shadow: 0 6px 0 0 currentColor,
 			0 -6px 0 0 currentColor;
+		}
+	}
+	&--circle {
+		position: relative;
+		min-width: 0px;
+		border-radius: 999rem;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 2px;
+			height: 2px;
+			color:#fff;
+		}
+		&--normal {
+			width: 48px;
+			height: 48px;
+			&:after {
+				transform: translate(-300%, -50%);
+				box-shadow: 1px -1px 0 0 currentColor,
+				2px -2px 0 0 currentColor,
+				3px -3px 0 0 currentColor,
+				4px -4px 0 0 currentColor,
+				4px -4px 0 0 currentColor,
+				5px -5px 0 0 currentColor,
+				6px -6px 0 0 currentColor,
+				1px 1px 0 0 currentColor,
+				2px 2px 0 0 currentColor,
+				3px 3px 0 0 currentColor,
+				4px 4px 0 0 currentColor,
+				5px 5px 0 0 currentColor,
+				6px 6px 0 0 currentColor,
+			}
+		}
+		&--small {
+			width: 36px;
+			height: 36px;
+			&:after {
+				transform: translate(100%, -50%);
+				box-shadow: -1px 1px 0 0 currentColor,
+				-2px 2px 0 0 currentColor,
+				-3px 3px 0 0 currentColor,
+				-4px 4px 0 0 currentColor,
+				-4px 4px 0 0 currentColor,
+				-1px -1px 0 0 currentColor,
+				-2px -2px 0 0 currentColor,
+				-3px -3px 0 0 currentColor,
+				-4px -4px 0 0 currentColor,
+			}
+		}
+		&--large {
+			width: 60px;
+			height: 60px;
+			&:after {
+				transform: translate(150%, -50%);
+				box-shadow: -1px 1px 0 0 currentColor,
+				-2px 2px 0 0 currentColor,
+				-3px 3px 0 0 currentColor,
+				-4px 4px 0 0 currentColor,
+				-5px 5px 0 0 currentColor,
+				-6px 6px 0 0 currentColor,
+				-7px 7px 0 0 currentColor,
+				-8px 8px 0 0 currentColor,
+				-1px -1px 0 0 currentColor,
+				-2px -2px 0 0 currentColor,
+				-3px -3px 0 0 currentColor,
+				-4px -4px 0 0 currentColor,
+				-5px -5px 0 0 currentColor,
+				-6px -6px 0 0 currentColor,
+				-7px -7px 0 0 currentColor,
+				-8px -8px 0 0 currentColor,
+			}
+		}
+	}
+	&--arrow {
+		position: relative;
+		min-width: 75px;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 41px;
+			height: 41px;
+			background-color: inherit;
+			border-radius: 6px;
+			transform: translate(39%, -50%) rotate(45deg);
+		}
+	}
+	&--arrow__text {
+		position: relative;
+		z-index: 1;
+	}
+	&--split {
+		overflow: hidden;
+		min-width: 0px;
+		padding: 0;
+		&:hover {
+			background-color: $blue-color;
+		}
+		&--block {
+			position: relative;
+			float: left;
+			border: none;
+			width: 36px;
+			height: 36px;
+			padding: 0px;
+			background: transparent;
+			color:#fff;
+			cursor: pointer;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 50%;
+				width: 2px;
+				height: 2px;
+				background-color: currentColor;
+			}
+			&:hover {
+			background-color: $blue-push-color;
+			transition: 0.3s;
+		}
+		}
+		&__left {
+			border-right: 1px solid #609fc0;
+			&:after {
+				transform: translate(-100%, -50%);
+				box-shadow: 1px -1px 0 0 currentColor,
+				2px -2px 0 0 currentColor,
+				3px -3px 0 0 currentColor,
+				4px -4px 0 0 currentColor,
+				1px 1px 0 0 currentColor,
+				2px 2px 0 0 currentColor,
+				3px 3px 0 0 currentColor,
+				4px 4px 0 0 currentColor;
+			}
+		}
+		&__right {
+			border-left: 1px solid #609fc0;
+			&:after {
+				transform: translate(50%, -50%);
+				box-shadow: -1px -1px 0 0 currentColor,
+				-2px -2px 0 0 currentColor,
+				-3px -3px 0 0 currentColor,
+				-4px -4px 0 0 currentColor,
+				-1px 1px 0 0 currentColor,
+				-2px 2px 0 0 currentColor,
+				-3px 3px 0 0 currentColor,
+				-4px 4px 0 0 currentColor;
+			}
 		}
 	}
 	&--large {
@@ -120,6 +272,22 @@ button {
 				transform: translate( -50%, -50%);
 				box-shadow: 0 6px 0 0 currentColor,
 				0 -6px 0 0 currentColor;
+			}
+		}
+		&--arrow {
+			position: relative;
+			min-width: 90px;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 31px;
+				height: 31px;
+				background-color: inherit;
+				border-radius: 6px;
+				transform: translate(39%, -50%) rotate(45deg);
+			}
 		}
 	}
 }

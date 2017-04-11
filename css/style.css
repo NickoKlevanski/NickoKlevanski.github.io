@@ -13,7 +13,7 @@ button {
   outline: none; }
 
 .container {
-  max-width: 960px;
+  max-width: 980px;
   margin: 50px auto;
   padding: 20px 0;
   overflow: hidden; }
@@ -62,7 +62,7 @@ button {
     border-radius: 6px;
     transition: 0.3s; }
     .btn--square:after {
-      content: '';
+      content: ' ';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -71,6 +71,89 @@ button {
       background-color: currentColor;
       transform: translate(-50%, -50%);
       box-shadow: 0 6px 0 0 currentColor, 0 -6px 0 0 currentColor; }
+  .btn--circle {
+    position: relative;
+    min-width: 0px;
+    border-radius: 999rem; }
+    .btn--circle:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 2px;
+      height: 2px;
+      color: #fff; }
+    .btn--circle--normal {
+      width: 48px;
+      height: 48px; }
+      .btn--circle--normal:after {
+        transform: translate(-300%, -50%);
+        box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor, 4px -4px 0 0 currentColor, 5px -5px 0 0 currentColor, 6px -6px 0 0 currentColor, 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, 4px 4px 0 0 currentColor, 5px 5px 0 0 currentColor, 6px 6px 0 0 currentColor; }
+    .btn--circle--small {
+      width: 36px;
+      height: 36px; }
+      .btn--circle--small:after {
+        transform: translate(100%, -50%);
+        box-shadow: -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor, -4px 4px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor; }
+    .btn--circle--large {
+      width: 60px;
+      height: 60px; }
+      .btn--circle--large:after {
+        transform: translate(150%, -50%);
+        box-shadow: -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor, -5px 5px 0 0 currentColor, -6px 6px 0 0 currentColor, -7px 7px 0 0 currentColor, -8px 8px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor, -5px -5px 0 0 currentColor, -6px -6px 0 0 currentColor, -7px -7px 0 0 currentColor, -8px -8px 0 0 currentColor; }
+  .btn--arrow {
+    position: relative;
+    min-width: 75px; }
+    .btn--arrow:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 41px;
+      height: 41px;
+      background-color: inherit;
+      border-radius: 6px;
+      transform: translate(39%, -50%) rotate(45deg); }
+  .btn--arrow__text {
+    position: relative;
+    z-index: 1; }
+  .btn--split {
+    overflow: hidden;
+    min-width: 0px;
+    padding: 0; }
+    .btn--split:hover {
+      background-color: #65abd0; }
+    .btn--split--block {
+      position: relative;
+      float: left;
+      border: none;
+      width: 36px;
+      height: 36px;
+      padding: 0px;
+      background: transparent;
+      color: #fff;
+      cursor: pointer; }
+      .btn--split--block:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 2px;
+        height: 2px;
+        background-color: currentColor; }
+      .btn--split--block:hover {
+        background-color: #5093b7;
+        transition: 0.3s; }
+    .btn--split__left {
+      border-right: 1px solid #609fc0; }
+      .btn--split__left:after {
+        transform: translate(-100%, -50%);
+        box-shadow: 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor, 3px -3px 0 0 currentColor, 4px -4px 0 0 currentColor, 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, 3px 3px 0 0 currentColor, 4px 4px 0 0 currentColor; }
+    .btn--split__right {
+      border-left: 1px solid #609fc0; }
+      .btn--split__right:after {
+        transform: translate(50%, -50%);
+        box-shadow: -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -3px -3px 0 0 currentColor, -4px -4px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, -3px 3px 0 0 currentColor, -4px 4px 0 0 currentColor; }
   .btn--large {
     padding: 23px 15px;
     min-width: 190px;
@@ -97,5 +180,18 @@ button {
         background-color: currentColor;
         transform: translate(-50%, -50%);
         box-shadow: 0 6px 0 0 currentColor, 0 -6px 0 0 currentColor; }
+    .btn--small--arrow {
+      position: relative;
+      min-width: 90px; }
+      .btn--small--arrow:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 31px;
+        height: 31px;
+        background-color: inherit;
+        border-radius: 6px;
+        transform: translate(39%, -50%) rotate(45deg); }
 
 /*# sourceMappingURL=style.css.map */
