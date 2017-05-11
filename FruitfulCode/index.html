@@ -9,31 +9,90 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="wrapper">
 	<header>
 		<div class="container">
-			<div class="logo-block">
+			<div class="header header__top">
 				<div>
 					<img src="img/logo.png" alt="">
-					<span class="logo-text">my first web page</span>
+					<span class="header__logo-text">my first web page</span>
 				</div>
 				<div class="sign-in">
 					<i class="fa fa-key"></i>
 					<a href="#" class="login">login</a>
-					<button class="btn-contact">contact me</button>
+					<button class="sign-in__btn"><img src="img/envelope.svg" alt="" class="envelope-ic"><span>contact me</span></button>
 				</div>
 			</div>
 		</div>
 		<div class="nav-wrapper">
-			<nav class="container">
-				<ul class="nav-inline">
-					<li class="li-inline"><a href="#">home</a></li>
-					<li class="li-inline"><a href="#">about</a></li>
-					<li class="li-inline"><a href="#">news</a></li>
-					<li class="li-inline"><a href="#">portfolio</a></li>
-					<li class="li-inline"><a href="#">blog</a></li>
-				</ul>
-			</nav>
+			<div class="container">
+				<div class="header">
+					<div class="btn-menu"></div>
+					<nav class="header__bot">
+						<a href="#" class="link is-active">home</a>
+						<a href="#" class="link">about</a>
+						<a href="#" class="link">news</a>
+						<a href="#" class="link">portfolio</a>
+						<a href="#" class="link">blog</a>
+					</nav>
+					<div>
+						<div class="search-form">
+							<form action="#">
+								<input type="search" class="search-form__field" placeholder="search">
+								<span class="search-icon"></span>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
+		<div class="container">
+			<div class="content">
+				<h2 class="content__title">What 10 Things Should You Do Every Day To Improve Your Life?</h2>
+				<p class="content__p">Learning another language can keep your mind sharp. Music lessons increase intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a little effort each day and it’s more responsible for your success than IQ.</p>
+				<span class="content__title-list">Key features</span>
+				<ul class="content__description">
+					<li class="content__description-list">It will make you happier.</li>
+					<li class="content__description-list">It will improve your relationships.</li>
+					<li class="content__description-list">It can make you a better person.</li>
+					<li class="content__description-list">It can make life better for everyone around you.</li>
+				</ul>
+				<span class="news">Recent news</span>
+				<div class="gallery">
+					<div class="gallery__block">
+						<a href="" class="gallery__link"><img src="img/image-1.jpg" alt="news picture">
+							<span class="gallery__text">Being in nature reduces stress, makes you more creative</span>
+						</a>
+					</div>
+					<div class="gallery__block">
+						<a href="" class="gallery__link"><img src="img/image-2.jpg" alt="news picture">
+							<span class="gallery__text">Usability Testing for Mobile Is Easy</span>
+						</a>
+					</div>
+					<div class="gallery__block">
+						<a href="" class="gallery__link"><img src="img/image-3.jpg" alt="news picture">
+							<span class="gallery__text">Infinite Scrolling Is Not for Every Website</span>
+						</a>
+					</div>
+					<div class="gallery__block">
+						<a href="" class="gallery__link"><img src="img/image-4.jpg" alt="news picture">
+							<span class="gallery__text">Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid</span>
+						</a>
+					</div>
+					<div class="gallery__block">
+						<a href="" class="gallery__link"><img src="img/image-5.jpg" alt="news picture">
+							<span class="gallery__text">University Websites: Top 10 Design Guidelines</span>
+						</a>
+					</div>
+					<div class="gallery__block">
+						<a href="" class="gallery__link"><img src="img/image-6.jpg" alt="news picture">
+							<span class="gallery__text">University Websites: Top 10 Design Guidelines copy</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
 </body>
 </html>
