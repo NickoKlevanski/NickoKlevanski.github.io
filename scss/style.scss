@@ -1,293 +1,349 @@
-@font-face {
-	font-family: 'cabinsemibold';
-	src: url('../fonts/cabin-semibold-webfont.eot');
-	src: url('../fonts/cabin-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/cabin-semibold-webfont.woff2') format('woff2'),
-	url('../fonts/cabin-semibold-webfont.woff') format('woff'),
-	url('../fonts/cabin-semibold-webfont.ttf') format('truetype'),
-	url('../fonts/cabin-semibold-webfont.svg#cabinsemibold') format('svg');
-	font-weight: normal;
-	font-style: normal;
+@import 'settings';
+
+.wrapper {
+	&__bg {
+		background: url('../img/bg.jpg');
+		@media (max-width: 640px) {
+			background: url('../img/bg-mid_mob.jpg') center top;
+			background-repeat: no-repeat; 
+		}
+	}
+	&__bg-mob {
+		@media (max-width: 640px) {
+			background: url('../img/bg-foot_mob.jpg') center top;
+			background-repeat: no-repeat; 
+		}
+	}
 }
 
-$blue-color: #65abd0;
-$blue-push-color: #5093b7;
-
-* {
-	box-sizing: border-box;
-}
-
-button {
-	border:none;
-	outline:none;
-}
 
 .container {
-	max-width: 980px;
-	margin: 50px auto;
-	padding: 20px 0;
-	overflow: hidden;
+	max-width: 1000px;
+	margin: 0 auto;
+	@media (max-width: 640px) {
+		margin: 0 35px;
+	}
+	&__center {
+		text-align: center;
+	}
 }
 
-/*-------------------------------------*\
+.header {
+	width: 95%;
+	margin: 0 auto;
+	padding: 40px 0 10px;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
 
-#BUTTONS
+.logo {
+	&__text {
+		@include text-config(26px, 58px, $headColor)
+		display: block;
+		margin-left: 15px;
+		font-family: $sans;
+		letter-spacing: 0;
+	}
+}
 
-\*-------------------------------------*/
+.content {
+	text-align:center;
+}
+
+.title {
+	margin: 0;
+	padding: 60px 0 10px;
+	color: $mainColor;
+	text-transform: uppercase;
+	font-family: $circe;
+}
+
+.parag {
+	@include text-config(30px, 32px, $textColor)
+	padding: 0;
+	text-transform: uppercase;
+	font-family: $circe;
+}
 
 .btn {
-	display: inline-block;
-	margin:0 20px 20px 0;
-	padding: 18px 15px;
-	min-width: 140px;
-	background-color: $blue-color;
-	color:#fff;
-	font-family: 'cabinsemibold', sans-serif;
-	vertical-align: middle;
-	font-size: 16px;
-	letter-spacing: 0.02rem;
-	text-align:center;
-	transition: 0.3s;
+	@include text-config(30px, 32px, $lightColor)
+	min-width: 435px;
+	padding: 20px;
+	border-bottom: 5px solid #ff332a;
+	background: $mainColor;
+	font-family: $sans;
+	font-weight: 400;
 	cursor: pointer;
+	transition: all 0.3s;
 	&:hover {
-		background:$blue-push-color;
-		transition: 0.3s;
+		background: #ff332a;
+		transition: all 0.3s;
 	}
-	&--rounded {
-		border-radius: 6px;
+	&__middle {
+		@include text-config(34px, 34px, $lightColor)
+		min-width: 380px;
+		padding: 10px;
+		border-bottom: none;
 	}
-	&--round {
-		border-radius: 999rem;
+	&__footer {
+		@include text-config(34px, 34px, $lightColor)
+		display: block;
+		width: 100%;
+		padding: 10px;
 	}
-	&--ghost {
-		border: 2px solid $blue-color;
-		background-color:transparent;
-		border-radius: 999rem;
-		color: $blue-color;
-		&:hover {
-			border: 2px solid $blue-push-color;
-			background-color:transparent;
-			color: $blue-push-color;
-			transition: 0.3s;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	@media (max-width: 640px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	&__left {
+		width: 50%;
+		background-color: $mainColor;
+		@media (max-width: 640px) {
+			width: 100%;
 		}
 	}
-	&--square {
-		position: relative;
-		min-width:0px;
-		width: 48px;
-		height: 48px;
-		padding:0;
-		border-radius: 6px;
-		transition: 0.3s;
-		&:after {
-			content: ' ';
-			position: absolute;
-			top:50%;
-			left:50%;
-			width:18px;
-			height:2px;
-			background-color: currentColor;
-			transform: translate( -50%, -50%);
-			box-shadow: 0 6px 0 0 currentColor,
-			0 -6px 0 0 currentColor;
+	&__right {
+		width: 50%;
+		background-color: #eaeaea;
+		text-align: center;
+		@media (max-width: 640px) {
+			width: 100%;
 		}
 	}
-	&--circle {
+	&__right-text {
+		@include text-config(21px, 22px, $textColor)
+		display: block;
+		padding-top: 25px;
+		font-family: $sans;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__right-text-bold {
+		@include text-config(23px, 26px, $textColor)
+		display: block;
+		padding: 25px 30px;
+		font-family: $sans;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+	}
+}
+
+.countdown {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px 100px;
+	text-align: center;
+	&__block {
 		position: relative;
-		min-width: 0px;
-		border-radius: 999rem;
-		&:after {
-			content: '';
+		width: 65px;
+		height: 65px;
+		background: #2b2e35;
+		border-radius: 5px;
+		& > span {
 			position: absolute;
-			left: 50%;
-			top: 50%;
-			width: 2px;
-			height: 2px;
+			top: 5px;
+			left: 0;
 			color:#fff;
-		}
-		&--normal {
-			width: 48px;
-			height: 48px;
-			&:after {
-				transform: translate(-300%, -50%);
-				box-shadow: 1px -1px 0 0 currentColor,
-				2px -2px 0 0 currentColor,
-				3px -3px 0 0 currentColor,
-				4px -4px 0 0 currentColor,
-				4px -4px 0 0 currentColor,
-				5px -5px 0 0 currentColor,
-				6px -6px 0 0 currentColor,
-				1px 1px 0 0 currentColor,
-				2px 2px 0 0 currentColor,
-				3px 3px 0 0 currentColor,
-				4px 4px 0 0 currentColor,
-				5px 5px 0 0 currentColor,
-				6px 6px 0 0 currentColor,
-			}
-		}
-		&--small {
-			width: 36px;
-			height: 36px;
-			&:after {
-				transform: translate(100%, -50%);
-				box-shadow: -1px 1px 0 0 currentColor,
-				-2px 2px 0 0 currentColor,
-				-3px 3px 0 0 currentColor,
-				-4px 4px 0 0 currentColor,
-				-4px 4px 0 0 currentColor,
-				-1px -1px 0 0 currentColor,
-				-2px -2px 0 0 currentColor,
-				-3px -3px 0 0 currentColor,
-				-4px -4px 0 0 currentColor,
-			}
-		}
-		&--large {
-			width: 60px;
-			height: 60px;
-			&:after {
-				transform: translate(150%, -50%);
-				box-shadow: -1px 1px 0 0 currentColor,
-				-2px 2px 0 0 currentColor,
-				-3px 3px 0 0 currentColor,
-				-4px 4px 0 0 currentColor,
-				-5px 5px 0 0 currentColor,
-				-6px 6px 0 0 currentColor,
-				-7px 7px 0 0 currentColor,
-				-8px 8px 0 0 currentColor,
-				-1px -1px 0 0 currentColor,
-				-2px -2px 0 0 currentColor,
-				-3px -3px 0 0 currentColor,
-				-4px -4px 0 0 currentColor,
-				-5px -5px 0 0 currentColor,
-				-6px -6px 0 0 currentColor,
-				-7px -7px 0 0 currentColor,
-				-8px -8px 0 0 currentColor,
-			}
+			font-size: 50px;
+			transform: translateX(80%);
 		}
 	}
-	&--arrow {
-		position: relative;
-		min-width: 75px;
-		&:after {
-			content: '';
-			position: absolute;
-			top: 50%;
-			right: 0;
-			width: 41px;
-			height: 41px;
-			background-color: inherit;
-			border-radius: 6px;
-			transform: translate(39%, -50%) rotate(45deg);
+	&__text {
+		@include text-config(14px, 16px, $textColor)
+		padding-left: 10px;
+		font-family: $circe;
+		text-transform: uppercase;
+	}
+}
+
+.date {
+	&__img {
+		display:inline-block;
+		padding: 35px;
+	}
+	&__day {
+		display:inline-block;
+		max-height: 100%;
+		& > span {
+			display: block;
+			padding: 10px 0;
+		}
+		&-week {
+			@include text-config(24px, 26px, $lightColor)
+			text-transform: uppercase;
+			font-family: $circe;
+		}
+		&-month {
+			@include text-config(28px, 30px, $lightColor)
+			border-bottom: 1px dashed #fff;
+			text-transform: uppercase;
+			font-family: $circe;
+		}
+		&-time {
+			@include text-config(24px, 26px, $lightColor)
+			text-transform: uppercase;
+			font-family: $sans;
 		}
 	}
-	&--arrow__text {
-		position: relative;
-		z-index: 1;
+}
+
+.speaker {
+	&__img {
+		display: block;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		border: 5px solid $lightColor;
+		border-radius: 50%;
 	}
-	&--split {
-		overflow: hidden;
-		min-width: 0px;
-		padding: 0;
-		&:hover {
-			background-color: $blue-color;
-		}
-		&--block {
+	&__title {
+		@include text-config(22px, 24px, $lightColor)
+		display: block;
+		padding: 20px;
+		font-style: italic;
+	}
+	&__name {
+		@include text-config(22px, 24px, $lightColor)
+		display: block;
+		font-family: $circe;
+		font-weight: 700;
+	}
+}
+
+.description {
+	@include text-config(18px, 22px, $lightColor)
+	padding-left: 60px;
+	padding-right: 40px;
+	& > ul > li {
+		padding: 5px 0;
+	}
+	&__right {
+		@include text-config(24px, 28px, $textColor)
+		padding-left: 20px;
+		padding-right: 40px;
+		font-family: $sans;
+		text-align: left;
+		& > ul > li {
 			position: relative;
-			float: left;
-			border: none;
-			width: 36px;
-			height: 36px;
-			padding: 0px;
-			background: transparent;
-			color:#fff;
-			cursor: pointer;
-			&:after {
+			padding: 10px 0;
+			list-style-type: none;
+			&:before {
 				content: '';
 				position: absolute;
-				top: 50%;
-				right: 50%;
-				width: 2px;
-				height: 2px;
-				background-color: currentColor;
-			}
-			&:hover {
-			background-color: $blue-push-color;
-			transition: 0.3s;
-		}
-		}
-		&__left {
-			border-right: 1px solid #609fc0;
-			&:after {
-				transform: translate(-100%, -50%);
-				box-shadow: 1px -1px 0 0 currentColor,
-				2px -2px 0 0 currentColor,
-				3px -3px 0 0 currentColor,
-				4px -4px 0 0 currentColor,
-				1px 1px 0 0 currentColor,
-				2px 2px 0 0 currentColor,
-				3px 3px 0 0 currentColor,
-				4px 4px 0 0 currentColor;
-			}
-		}
-		&__right {
-			border-left: 1px solid #609fc0;
-			&:after {
-				transform: translate(50%, -50%);
-				box-shadow: -1px -1px 0 0 currentColor,
-				-2px -2px 0 0 currentColor,
-				-3px -3px 0 0 currentColor,
-				-4px -4px 0 0 currentColor,
-				-1px 1px 0 0 currentColor,
-				-2px 2px 0 0 currentColor,
-				-3px 3px 0 0 currentColor,
-				-4px 4px 0 0 currentColor;
+				top: 30px;
+				left: -20px;
+				transform: translateY(-50%);
+				width: 4px;
+				height: 4px;
+				margin-right: 25px;
+				background-color: $mainColor;
+				box-shadow: -1px -1px 0 0 $mainColor,
+				-2px -2px 0 0 $mainColor,
+				-3px -3px 0 0 $mainColor,
+				-4px -4px 0 0 $mainColor,
+				-5px -5px 0 0 $mainColor,
+				1px -1px 0 0 $mainColor,
+				2px -2px 0 0 $mainColor,
+				3px -3px 0 0 $mainColor,
+				4px -4px 0 0 $mainColor,
+				5px -5px 0 0 $mainColor,
+				6px -6px 0 0 $mainColor,
+				7px -7px 0 0 $mainColor,
+				8px -8px 0 0 $mainColor,
 			}
 		}
 	}
-	&--large {
-		padding: 23px 15px;
-		min-width:190px;
-		font-size: 18px;
+}
+
+.text__format {
+	@include text-config(20px, 22px, $textColor)
+	display: block;
+	padding: 50px 30%;
+	font-style: italic;
+	& > span {
+		@include text-config(23px, 24px, $textColor)
 	}
-	&--small {
-		padding: 12px 15px;
-		min-width: 120px;
-		font-size: 14px;
-		&--square {
-			position: relative;
-			min-width:0px;
-			width: 36px;
-			height: 36px;
-			padding:0;
-			border-radius: 6px;
-			transition: 0.3s;
-			&:after {
-				content: '';
-				position: absolute;
-				top:50%;
-				left:50%;
-				width:16px;
-				height:2px;
-				background-color: currentColor;
-				transform: translate( -50%, -50%);
-				box-shadow: 0 6px 0 0 currentColor,
-				0 -6px 0 0 currentColor;
-			}
+	&-lower {
+		@include text-config(26px, 28px, $textColor)
+		display: block;
+		margin-bottom: 20px;
+		padding: 20px 12% 30px;
+		border-bottom: dashed #111;
+		font-family: $sans;
+	}
+}
+
+.motivation {
+	@include text-config(36px, 38px, $textColor)
+	display: block;
+	padding-top: 10px;
+	font-family: $sans;
+	font-weight: 700;
+	@media (max-width: 640px) {
+		padding-top: 0;
+		font-size: 24px;
+	}
+	&__text {
+		@include text-config(24px, 26px, $textColor)
+		padding: 8px 0;
+		font-family: $sans;
+		font-weight: 400;
+		text-align: left;
+		@media (max-width: 640px) {
+			padding: 8px;
+			font-size: 20px;
 		}
-		&--arrow {
-			position: relative;
-			min-width: 90px;
-			&:after {
-				content: '';
-				position: absolute;
-				top: 50%;
-				right: 0;
-				width: 31px;
-				height: 31px;
-				background-color: inherit;
-				border-radius: 6px;
-				transform: translate(39%, -50%) rotate(45deg);
-			}
+		&-bigger {
+			@include text-config(26px, 28px, $textColor)
+			padding: 8px 0;
+			font-family: $sans;
+			font-weight: 400;
+			text-align: left;
+			@media (max-width: 640px) {
+				padding: 8px;
+				font-size: 22px;
+		}
 		}
 	}
+}
+
+.group {
+	&__img {
+		padding: 25px 0px;
+		& > img {
+			max-width: 100%;
+			border: 5px solid $mainColor;
+		}
+		@media (max-width: 640px) {
+			padding: 10px 35px;
+		}
+	}
+}
+
+.footer {
+	&__text {
+		@include text-config(30px, 32px, $textColor)
+		display: inline-block;
+		padding-top: 15px;
+		font-family: $sans;
+		text-align: left;
+		&-lower {
+			@include text-config(24px, 26px, $textColor)
+			padding: 20px 0 40px;
+			font-family: $sans;
+		}
+	}
+}
+
+.icon {
+	width: 42px;
+	height: 42px;
+	padding: 30px 2px 50px;
 }
