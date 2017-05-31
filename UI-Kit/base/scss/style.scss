@@ -14,6 +14,7 @@ $blue-color: #65abd0;
 $blue-push-color: #5093b7;
 $green-color: #24aa98;
 $bd-color: #c6ccd2;
+$error-color: #db7560;
 
 * {
 	box-sizing: border-box;
@@ -23,6 +24,10 @@ button,
 [type="text"] {
 	border:none;
 	outline:none;
+}
+
+button {
+	overflow: visible;
 }
 
 .container {
@@ -346,6 +351,7 @@ button,
 }
 
 .split-btn {
+	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	height: 48px;
@@ -418,7 +424,7 @@ button,
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 112px;
+		min-width: 112px;
 		height: 100%;
 		background: $green-color;
 		padding-right: 20px;
@@ -447,5 +453,238 @@ button,
 			-3px -3px 0 0 currentColor,
 			-4px -4px 0 0 currentColor;
 		}
+		&-dropdown {
+			min-width: 60px;
+			border-radius: 6px;
+		}
+	}
+}
+
+.input-field {
+	position: relative;
+	display: inline-block;
+	width: 220px;
+	height: 48px;
+	margin: 0 16px 20px 0;
+	font-family: 'cabinsemibold', sans-serif;
+	vertical-align: middle;
+	&__empty {
+		width: 100%;
+		height: 100%;
+		margin: 0 20px 20px 0;
+		padding: 15px;
+		border: 2px solid $bd-color;
+		border-radius: 6px;
+		font-family: 'cabinsemibold', sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+		&.is-active {
+			border-color: $green-color;
+		}
+		&.is-error {
+			border-color: $error-color;
+		}
+	}
+	&__active {
+		width: 100%;
+		height: 100%;
+		margin: 0 20px 20px 0;
+		padding: 15px;
+		border: 2px solid $blue-color;
+		border-radius: 6px;
+		font-family: 'cabinsemibold', sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	&__round {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0 20px 20px 0;
+		padding: 15px;
+		padding-left: 40px;
+		border: 2px solid $bd-color;
+		border-radius: 999px;
+		font-family: 'cabinsemibold', sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+		&.is-active {
+			border: 2px solid $blue-color;
+			color: #111;
+		}
+	}
+	&__split-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 48px;
+		height: 100%;
+		background-color: $bd-color;
+		border-radius: 0 6px 6px 0;
+		cursor: pointer;
+		&--small {
+			width: 36px;
+		}
+	}
+	&__search {
+		padding-right: 50px;
+	}
+	&__small {
+		height: 36px;
+		&--text {
+			font-size: 14px;
+		}
+	}
+}
+
+.input-field__search--text:valid {
+	width: calc(100% - 58px);
+	& + .input-field__split-btn {
+		background-color: $green-color;
+		border-radius: 6px;
+	}
+}
+
+.search-icon {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	top: 50%;
+	padding-left: 15px;
+	transform: translateY(-50%);
+	color: $bd-color;
+	pointer-events:none;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 15px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		border: 2px solid currentColor;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		right: -15px;
+		bottom: 0;
+		width: 2px;
+		height: 2px;
+		background-color: currentColor;
+		box-shadow: -1px -1px 0 0 currentColor,
+		-2px -2px 0 0 currentColor,
+		-3px -3px 0 0 currentColor,
+		-4px -4px 0 0 currentColor,
+		-5px -5px 0 0 currentColor;
+	}
+	&.is-active {
+		color: #111;
+	}
+	&.search-icon {
+		&__small {
+			width: 16px;
+			height: 16px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 8px;
+				height: 8px;
+			}
+		}
+	}
+	&__center {
+		top: 50%;
+		left: 5px;
+		padding: 0;
+		color: #fff;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			right: -50%;
+		}
+		&--small {
+			left: 2px;
+		}
+	}
+}
+
+.close-icon {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 10px;
+	height: 10px;
+	transform: translateY(-50%);
+	color: #fff;
+	cursor: pointer;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 2px;
+		height: 2px;
+		background-color: currentColor;
+		transform: translate(-50%, -50%);
+		box-shadow: 1px 1px 0 0 currentColor,
+		2px 2px 0 0 currentColor,
+		3px 3px 0 0 currentColor,
+		-1px -1px 0 0 currentColor,
+		-2px -2px 0 0 currentColor,
+		-3px -3px 0 0 currentColor,
+		-1px 1px 0 0 currentColor,
+		-2px 2px 0 0 currentColor,
+		-3px 3px 0 0 currentColor,
+		1px -1px 0 0 currentColor,
+		2px -2px 0 0 currentColor,
+		3px -3px 0 0 currentColor;
+	}
+	&__circle {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: $bd-color;
+		color: #fff;
+	}
+	&.is-error {
+		color: $error-color;
+	}
+}
+
+.icon-check {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 14px;
+	height: 10px;
+	color: #fff;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 2px;
+		height: 2px;
+		background-color: currentColor;
+		transform: translateY(50%);
+		box-shadow: -1px -1px 0 0 currentColor,
+		-2px -2px 0 0 currentColor,
+		-3px -3px 0 0 currentColor,
+		1px -1px 0 0 currentColor,
+		2px -2px 0 0 currentColor,
+		3px -3px 0 0 currentColor,
+		4px -4px 0 0 currentColor,
+		5px -5px 0 0 currentColor,
+		6px -6px 0 0 currentColor,
+	}
+	&.is-active {
+		color: $green-color;
+	}
+	&.is-error {
+		color: $error-color;
 	}
 }
