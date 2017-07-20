@@ -92,8 +92,8 @@
     width: 2px;
     height: 2px;
     background-color: currentColor;
-    -webkit-transform: translate(-40%, -40%);
-            transform: translate(-40%, -40%);
+    -webkit-transform: translate(-80%, -50%);
+            transform: translate(-80%, -50%);
     -webkit-box-shadow: 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor;
             box-shadow: 1px 1px 0 0 currentColor, 2px 2px 0 0 currentColor, -1px -1px 0 0 currentColor, -2px -2px 0 0 currentColor, -1px 1px 0 0 currentColor, -2px 2px 0 0 currentColor, 1px -1px 0 0 currentColor, 2px -2px 0 0 currentColor; }
   .close-icon--circle {
