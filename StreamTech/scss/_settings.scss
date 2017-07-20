@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+$dark-blue-grey: #1f3654;
+$bluegrey: #88a6b0;
+$warm-pink: #ff3e7d;
+$red-pink: #f33573;
+$silver: #c2cdd1;
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}

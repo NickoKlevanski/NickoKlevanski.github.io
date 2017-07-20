@@ -1,0 +1,120 @@
+@import 'settings';
+
+.container {
+	max-width: 540px;
+	margin: 50px auto;
+	font-family: 'OpenSans',sans-serif;
+}
+
+.form-group {
+	margin: 30px 0;
+	&--title {
+		margin: 30px 0 60px;
+	}
+	&--center {
+		text-align: center;
+	}
+	&__title {
+		color: $dark-blue-grey;
+		font-size: 28px;
+		font-weight: 100;
+		margin: 0 0 20px;
+	}
+	&__subtitle {
+		color: $dark-blue-grey;
+		font-size: 14px;
+	}
+	&__component {
+		position: relative;
+	}
+	&__input {
+		width: 100%;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid $dark-blue-grey;
+		color: $dark-blue-grey;
+		font-size: 14px;
+		line-height: 30px;
+		z-index: 10;
+	}
+	&__label {
+		position: absolute;
+		left: 0;
+		bottom: 8px;
+		color: $bluegrey;
+		font-size: 16px;
+		line-height: 26px;
+		font-weight: 100;
+		transition: 0.2s ease-out;
+		transform: translateY(0%);
+		cursor: text;
+		pointer-events: none;
+	}
+}
+
+.form-group__input:focus + .form-group__label,
+.form-group__input:active + .form-group__label,
+.form-group__input:valid + .form-group__label {
+	font-size: 12px;
+	transform: translateY(-50%);
+}
+
+.btn {
+	min-width: 350px;
+	padding: 10px 30px;
+	background-color: $warm-pink;
+	border-radius: 100px;
+	border:none;
+	color: #fff;
+	font-size: 16px;
+	line-height: 26px;
+	box-shadow: 0px 3px 7px 5px rgba(155, 4, 54, 0.12);
+	outline: none;
+	transition: 0.2s ease-out;
+	&:active {
+		background: $red-pink;
+		color: rgba(255, 255, 255, 0.5);
+		box-shadow: 0px 3px 7px 5px rgba(155, 4, 54, 0.22);
+	}
+}
+
+.close-icon {
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 10px;
+	height: 10px;
+	transform: translateY(-50%);
+	color: #fff;
+	cursor: pointer;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 2px;
+		height: 2px;
+		background-color: currentColor;
+		transform: translate(-40%, -40%);
+		box-shadow: 1px 1px 0 0 currentColor,
+		2px 2px 0 0 currentColor,
+		-1px -1px 0 0 currentColor,
+		-2px -2px 0 0 currentColor,
+		-1px 1px 0 0 currentColor,
+		-2px 2px 0 0 currentColor,
+		1px -1px 0 0 currentColor,
+		2px -2px 0 0 currentColor,
+	}
+	&--circle {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: $silver;
+		color: #fff;
+	}
+}
+
+.form-group__input:valid ~ .close-icon {
+	display: block;
+}
