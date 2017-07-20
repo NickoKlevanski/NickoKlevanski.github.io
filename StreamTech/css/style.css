@@ -48,12 +48,13 @@
 .form-group__input:active + .form-group__label,
 .form-group__input:valid + .form-group__label {
   font-size: 12px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%); }
 
 .btn {
   min-width: 350px;
   padding: 10px 30px;
+  margin: 30px;
   background-color: #ff3e7d;
   border-radius: 100px;
   border: none;
