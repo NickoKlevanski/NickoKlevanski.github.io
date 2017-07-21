@@ -26,6 +26,7 @@
     border: none;
     outline: none;
     border-bottom: 1px solid #1f3654;
+    font-family: 'Open Sans',sans-serif;
     color: #1f3654;
     font-size: 14px;
     line-height: 30px;
@@ -59,6 +60,7 @@
   background-color: #ff3e7d;
   border-radius: 100px;
   border: none;
+  font-family: 'Open Sans',sans-serif;
   color: #fff;
   font-size: 16px;
   line-height: 26px;
